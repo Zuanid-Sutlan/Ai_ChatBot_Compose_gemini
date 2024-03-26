@@ -36,9 +36,7 @@ fun ChatBotView(viewModel: ChatBotViewModel) {
         ) {
             items(list) { chatData ->
                 if (chatData.messageFrom == MessageFromEnum.USER.name) {
-//                    if (list[0].messageFrom != MessageFromEnum.USER.name){
-                        UserMessage(chatData = chatData)
-//                    }
+                    UserMessage(chatData = chatData)
                 } else {
                     BotMessage(chatData = chatData)
                 }
